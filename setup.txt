@@ -1,0 +1,13 @@
+pip3 install torch torchvision torchaudio
+pip install opencv-python    
+pip3 install gym
+pip install h5py
+pip install numba
+pip install tensorboard
+pip install gymnasium
+
+for tianshou
+pip install packaging
+pip install pettingzoo
+pip install overrides
+pip install tqdm
