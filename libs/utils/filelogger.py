@@ -1,7 +1,8 @@
 import os.path
 from typing import Any, Callable, Optional, Tuple,List
 
-from tianshou.utils.logger.base import LOG_DATA_TYPE, BaseLogger
+#from tianshou.utils.logger.base import LOG_DATA_TYPE, BaseLogger
+from tianshou.utils.logger.base import VALID_LOG_VALS_TYPE, BaseLogger
 
 import  csv
 class CSVFileLogger(BaseLogger):
@@ -36,7 +37,7 @@ class CSVFileLogger(BaseLogger):
 
 
 
-    def write(self, step_type: str, step: int, data: LOG_DATA_TYPE) -> None:
+    def write(self, step_type: str, step: int, data: dict[str, VALID_LOG_VALS_TYPE] ) -> None:
         "write do nothing"
         pass
 
@@ -85,7 +86,7 @@ class LoggerMerge(BaseLogger):
     def __init__(self,loggers:List[BaseLogger]):
         self.loggers = loggers
 
-    def write(self, step_type: str, step: int, data: LOG_DATA_TYPE) -> None:
+    def write(self, step_type: str, step: int, data: dict[str, VALID_LOG_VALS_TYPE]) -> None:
         pass
 
     def log_test_data(self, collect_result: dict, step: int) -> None:

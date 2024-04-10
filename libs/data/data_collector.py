@@ -2,7 +2,7 @@ import time
 import warnings
 from typing import Any, Callable, Dict, List, Optional, Union
 
-import gym
+import gymnasium as gym
 import numpy as np
 import torch
 
@@ -12,7 +12,7 @@ from tianshou.data import (
 
     to_numpy,
 )
-from tianshou.data.batch import _alloc_by_keys_diff
+from tianshou.data.batch import alloc_by_keys_diff
 from tianshou.env import BaseVectorEnv, DummyVectorEnv
 from tianshou.policy import BasePolicy
 from .vecbuf import  ReplayBuffer,ReplayBufferManager,VectorReplayBuffer

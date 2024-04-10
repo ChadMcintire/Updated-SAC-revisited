@@ -4,7 +4,7 @@ import numpy as np
 from numba import njit
 from .buffer_base import Batch,ReplayBuffer
 from tianshou.data import  PrioritizedReplayBuffer
-from tianshou.data.batch import _alloc_by_keys_diff, _create_value
+from tianshou.data.batch import alloc_by_keys_diff, create_value
 
 
 class ReplayBufferManager(ReplayBuffer):
